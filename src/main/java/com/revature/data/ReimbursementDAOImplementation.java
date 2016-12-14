@@ -1,19 +1,25 @@
 package com.revature.data;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 import com.revature.beans.Reimbursement;
 import com.revature.beans.ReimbursementStatus;
 import com.revature.beans.ReimbursementType;
 import com.revature.beans.User;
 
+import javax.naming.AuthenticationException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class ReimbursementDAOImplementation implements ReimbursementDAO {
     private Connection connection = null;
+
+    public ReimbursementDAOImplementation(Connection connection) {
+        this.connection = connection;
+    }
 
     @Override
     public void insert(Reimbursement reimbursement) {
@@ -39,13 +45,6 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
         }
     }
 
-    public void setConnection(Connection connection) {
-        // TODO Auto-generated method stub
-        if (this.connection == null) {
-            this.connection = connection;
-        }
-    }
-
     @Override
     public List<Reimbursement> getReimbursements() {
         // TODO Auto-generated method stub
@@ -53,11 +52,23 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
         ResultSet resultSet;
         ArrayList<Reimbursement> list = new ArrayList<>();
         PreparedStatement statement;
+        UserDAO userDAO = UserDAOFactory.getInstance(connection);
+        ReimbursementTypeDAO typeDAO = ReimbursementTypeDAOFactory.getInstance(connection);
+        ReimbursementStatusDAO statusDAO = ReimbursementStatusDAOFactory.getInstance(connection);
         try {
             statement = connection.prepareStatement(sql);
             resultSet = statement.executeQuery();
-            while(resultSet.next()) {
-                list.add(new Reimbursement(resultSet.getInt("REIMB_ID"), resultSet.getDouble("REIMB_AMOUNT"), resultSet.getTimestamp("REIMB_SUBMITTED"), resultSet.getTimestamp("REIMB_RESOLVED"), resultSet.getString("REIMB_DESCRIPTION"), resultSet.getBinaryStream("REIMB_RECEIPT"), new User(resultSet.getInt("REIMB_AUTHOR"), connection),null, new ReimbursementStatus(resultSet.getInt("REIMB_STATUS_ID"), connection), new ReimbursementType(resultSet.getInt("REIMB_TYPE_ID"), connection)));
+            while (resultSet.next()) {
+                list.add(new Reimbursement(resultSet.getInt("REIMB_ID"),
+                        resultSet.getDouble("REIMB_AMOUNT"),
+                        resultSet.getTimestamp("REIMB_SUBMITTED"),
+                        resultSet.getTimestamp("REIMB_RESOLVED"),
+                        resultSet.getString("REIMB_DESCRIPTION"),
+                        resultSet.getBinaryStream("REIMB_RECEIPT"),
+                        userDAO.getByUserId(resultSet.getInt("REIMB_AUTHOR")),
+                        null,
+                        statusDAO.getReimbursementStatus(resultSet.getInt("REIMB_STATUS_ID")),
+                        typeDAO.getReimbursementType(resultSet.getInt("REIMB_TYPE_ID"))));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -67,19 +78,31 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
     }
 
     @Override
-    public Reimbursement getReimbursement(String username) {
+    public Reimbursement getReimbursement(String username) throws AuthenticationException {
         // TODO Auto-generated method stub
-        String sql = "SELECT * FROM"
-                + " (ERS_REIMBURSEMENT JOIN ERS_USERS ON ERS_USERS_ID = REIMB_AUTHOR) "
-                + "WHERE ERS_USERNAME = ?";
+        UserDAO userDAO = UserDAOFactory.getInstance(connection);
+        ReimbursementTypeDAO typeDAO = ReimbursementTypeDAOFactory.getInstance(connection);
+        ReimbursementStatusDAO statusDAO = ReimbursementStatusDAOFactory.getInstance(connection);
+        String sql = "SELECT * FROM ERS_REIMBURSEMENT WHERE REIMB_AUTHOR = ?";
+        User user = userDAO.getByUsername(username);
         PreparedStatement statement;
         ResultSet resultSet;
         Reimbursement reimbursement = null;
         try {
             statement = connection.prepareStatement(sql);
+            statement.setInt(1, user.getUserId());
             resultSet = statement.executeQuery();
             resultSet.next();
-            reimbursement = new Reimbursement(resultSet.getInt("REIMB_ID"), resultSet.getDouble("REIMB_AMOUNT"), resultSet.getTimestamp("REIMB_SUBMITTED"), resultSet.getTimestamp("REIMB_RESOLVED"), resultSet.getString("REIMB_DESCRIPTION"), resultSet.getBinaryStream("REIMB_RECEIPT"), new User(resultSet.getInt("REIMB_AUTHOR"), connection), null, new ReimbursementStatus(resultSet.getInt("REIMB_STATUS_ID"), connection), new ReimbursementType(resultSet.getInt("REIMB_TYPE_ID"), connection));
+            reimbursement = new Reimbursement(resultSet.getInt("REIMB_ID"),
+                    resultSet.getDouble("REIMB_AMOUNT"),
+                    resultSet.getTimestamp("REIMB_SUBMITTED"),
+                    resultSet.getTimestamp("REIMB_RESOLVED"),
+                    resultSet.getString("REIMB_DESCRIPTION"),
+                    resultSet.getBinaryStream("REIMB_RECEIPT"),
+                    userDAO.getByUserId(resultSet.getInt("REIMB_AUTHOR")),
+                    null,
+                    statusDAO.getReimbursementStatus(resultSet.getInt("REIMB_STATUS_ID")),
+                    typeDAO.getReimbursementType(resultSet.getInt("REIMB_TYPE_ID")));
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             System.out.println("SQL Exception: The reimbursement couldn't be retrieved");
@@ -100,8 +123,20 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
         } catch (SQLException e) {
             System.out.println("Something went wrong updating the status of the reimbursement");
         }
+    }
 
+    @Override
+    public Reimbursement createNewReimbursement(String username, double amount, String description, String receipt, int statusId, String status, int typeId, String type) throws AuthenticationException {
+        UserDAO userDAO = UserDAOFactory.getInstance(connection);
 
+        User user = userDAO.getByUsername(username);
+        FileInputStream fileInputStream = null;
+        try {
+            fileInputStream = new FileInputStream(new File(receipt));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return new Reimbursement(user.getUserId(), amount, new Timestamp(new Date().getTime()), null, description, fileInputStream, user, null, new ReimbursementStatus(statusId, status), new ReimbursementType(typeId, type));
     }
 
 }

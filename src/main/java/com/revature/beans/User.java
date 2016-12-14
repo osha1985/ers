@@ -1,8 +1,5 @@
 package com.revature.beans;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
 
 public class User {
     private int userId;
@@ -91,32 +88,5 @@ public class User {
     public User() {
         // TODO Auto-generated constructor stub
     }
-
-    public User(int userId, Connection connection) {
-        // TODO Auto-generated constructor stub
-        this.userId = userId;
-        String sql = "SELECT * FROM"
-                + " (ERS_USERS JOIN ERS_USER_ROLES ON ERS_USER_ROLE_ID = USER_ROLE_ID) "
-                + "WHERE ERS_USERS_ID = ?";
-        PreparedStatement statement;
-        ResultSet resultSet;
-        try {
-            statement = connection.prepareStatement(sql);
-            statement.setInt(1, userId);
-            System.out.println(userId);
-            resultSet = statement.executeQuery();
-            resultSet.next();
-            this.username = resultSet.getString("ERS_USERNAME");
-            this.password = resultSet.getString("ERS_PASSWORD");
-            this.firstName = resultSet.getString("USER_FIRST_NAME");
-            this.lastName = resultSet.getString("USER_LAST_NAME");
-            this.email = resultSet.getString("USER_EMAIL");
-            this.role = new Role(resultSet.getInt("ERS_USER_ROLE_ID"), resultSet.getString("USER_ROLE"));
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            System.out.println("Something went wrong creating the user object from database data");
-        }
-    }
-
 }
+

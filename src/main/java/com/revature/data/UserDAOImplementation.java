@@ -1,25 +1,26 @@
 package com.revature.data;
+import com.revature.beans.User;
+
+import javax.naming.AuthenticationException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.naming.AuthenticationException;
-
-import com.revature.beans.Role;
-import com.revature.beans.User;
-
 public class UserDAOImplementation implements UserDAO {
     private Connection connection = null;
+
+    public UserDAOImplementation(Connection connection) {
+        this.connection = connection;
+    }
 
     @Override
     public User getByUsername(String userName) throws AuthenticationException {
         User user = new User();
         ResultSet resultSet;
         PreparedStatement statement;
-        String sql = "SELECT * FROM (ERS_USERS u JOIN ERS_USER_ROLES e ON u.USER_ROLE_ID = e.ERS_USER_ROLE_ID) "
-                + "WHERE ERS_USERNAME = ?";
-
+        String sql = "SELECT * FROM ERS_USERS WHERE ERS_USERNAME = ?";
+        RoleDAO dao = RoleDAOFactory.getInstance(connection);
         try {
             statement = connection.prepareStatement(sql);
             statement.setString(1, userName);
@@ -31,7 +32,7 @@ public class UserDAOImplementation implements UserDAO {
             user.setFirstName(resultSet.getString("USER_FIRST_NAME"));
             user.setLastName(resultSet.getString("USER_LAST_NAME"));
             user.setPassword(resultSet.getString("ERS_PASSWORD"));
-            user.setRole(new Role(resultSet.getInt("ERS_USER_ROLE_ID"), resultSet.getString("USER_ROLE")));
+            user.setRole(dao.getRole(resultSet.getInt("USER_ROLE_ID")));
             user.setUserId(resultSet.getInt("ERS_USERS_ID"));
             user.setUsername(resultSet.getString("ERS_USERNAME"));
         } catch (SQLException e) {
@@ -40,34 +41,9 @@ public class UserDAOImplementation implements UserDAO {
         return user;
     }
 
-    public void setConnection(Connection connection) {
-        // TODO Auto-generated method stub
-        if (this.connection == null) {
-            this.connection = connection;
-        }
-    }
-
     @Override
-    public Role getUserRole(String username) {
-        // TODO Auto-generated method stub
-        Role role = new Role();
-        ResultSet resultSet;
-        PreparedStatement statement;
-        String sql = "SELECT USER_ROLE_ID, USER_ROLE FROM"
-                + " (ERS_USERS JOIN ERS_USER_ROLES ON USER_ROLE_ID = ERS_USER_ROLE_ID) "
-                + "WHERE ERS_USERNAME = ?";
-        try {
-            statement = connection.prepareStatement(sql);
-            statement.setString(1, username);
-            resultSet = statement.executeQuery();
-            resultSet.next();
-            role.setUserRole(resultSet.getString("USER_ROLE"));
-            role.setUserRoleId(resultSet.getInt("USER_ROLE_ID"));
-        } catch (SQLException e) {
-            System.out.println("The user role couldn't be accessed");
-        }
-        return role;
-
+    public User getByUserId(int userId) {
+        return null;
     }
 
 }

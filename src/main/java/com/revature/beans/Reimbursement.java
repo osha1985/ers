@@ -1,16 +1,10 @@
 package com.revature.beans;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.util.Date;
 
 public class Reimbursement {
+
+
     @Override
     public String toString() {
         return "Reimbursement [id=" + id + ", amount=" + amount + ", submitted=" + submitted + ", resolved=" + resolved
@@ -125,37 +119,5 @@ public class Reimbursement {
 
     public Reimbursement() {
         super();
-    }
-
-    public Reimbursement(String username, double amount, String description, String receipt, int typeId, String type, Connection connection) {
-        // TODO Auto-generated constructor stub
-        String sql = "SELECT * FROM"
-                + " (ERS_USERS JOIN ERS_USER_ROLES ON  ERS_USERS_ID = ERS_USER_ROLE_ID)"
-                + "WHERE ERS_USERNAME = ?";
-        PreparedStatement statement;
-        ResultSet resultSet;
-        this.amount = amount;
-        this.submitted = new Timestamp(new Date().getTime());
-        this.description = description;
-        try {
-            statement = connection.prepareStatement(sql);
-            statement.setString(1,username);
-            resultSet = statement.executeQuery();
-            resultSet.next();
-            this.author = new User(resultSet.getInt("ERS_USERS_ID"), username, resultSet.getString("ERS_PASSWORD"), resultSet.getString("USER_FIRST_NAME"), resultSet.getString("USER_LAST_NAME"), resultSet.getString("USER_EMAIL"), new Role(resultSet.getInt("ERS_USERS_ID"), resultSet.getString("USER_ROLE")));
-        } catch (SQLException e1) {
-            // TODO Auto-generated catch block
-            System.out.println("Something went wrong reading into the reimbursement object");
-        }
-        this.resolver = null;
-        this.status = new ReimbursementStatus(1, "Pending");
-        this.type = new ReimbursementType(typeId, type);
-        try {
-            this.receipt = new FileInputStream(new File(receipt));
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            System.out.println("The receipt could not be found");
-        }
-
     }
 }

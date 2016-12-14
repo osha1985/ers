@@ -1,19 +1,19 @@
 package com.revature.data;
-import java.sql.Connection;
-import java.util.List;
 
 import com.revature.beans.Reimbursement;
 
+import javax.naming.AuthenticationException;
+import java.util.List;
+
 public interface ReimbursementDAO {
 
-    public void insert(Reimbursement reimb);
+    void insert(Reimbursement reimbursement);
 
-    public void setConnection(Connection connection);
+    List<Reimbursement> getReimbursements();
 
-    public List<Reimbursement> getReimbursements();
+    Reimbursement getReimbursement(String username) throws AuthenticationException;
 
-    public Reimbursement getReimbursement(String username);
+    void modifyReimbursement(int reimbursementId, int statusId);
 
-    public void modifyReimbursement(int reimbursementId, int statusId);
-
+    Reimbursement createNewReimbursement(String username, double amount, String description, String receipt, int statusId, String status, int typeId, String type) throws AuthenticationException;
 }

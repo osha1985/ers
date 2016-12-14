@@ -6,6 +6,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="Project" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.mindrot:jbcrypt:0.3m" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/Project/META-INF/MANIFEST.MF" />
