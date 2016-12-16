@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,35 +22,35 @@
             <a class="navbar-brand" href="#">Employee Reimbursement System</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="#">View Past Tickets</a></li>
+            <li><a href="/Project/viewPastTickets">View Past Tickets</a></li>
             <li><a href="#">Add Reimbursement request</a></li>
+            <li><a href="/Project/">Logout</a></li>
         </ul>
     </div>
 </nav>
 
 <div class="container">
     <h2>Please enter the fields specified to submit your request</h2>
-    <form>
+    <form action="reimbursementAdded" method="post">
         <div class="form-group">
             <label for="amount">Reimbursement amount:</label> <input
                 type="number" class="form-control" id="amount"
-                placeholder="Reimbursement amount">
+                placeholder="Reimbursement amount" name="reimbursementAmount">
         </div>
         <div class="form-group">
-            <label for="descr">Description:</label>
-            <textarea rows="5" type="text" class="form-control" id="descr"
-                      placeholder="Enter description"></textarea>
+            <label for="description">Description:</label>
+            <textarea rows="5" type="text" class="form-control" id="description"
+                      placeholder="Enter description" name="reimbursementDescription"></textarea>
         </div>
         <div class="form-group">
-            <label for="receipt">Receipt:</label> <input type="file" id="receipt">
+            <label for="receipt">Receipt:</label> <input type="file" id="receipt" name="reimbursementReceipt">
         </div>
         <div class="form-group">
             <label for="sel1">Reimbursement type:</label>
-            <select class="form-control" id="sel1">
-                <option>LODGING</option>
-                <option>TRAVEL</option>
-                <option>FOOD</option>
-                <option>OTHER</option>
+            <select class="form-control" id="sel1" name="reimbursementType">
+                <c:forEach var="reimbursementType" items="${reimbursementTypes}">
+                    <option value="${reimbursementType.typeId}">${reimbursementType.type}</option>
+                </c:forEach>
             </select>
         </div>
         <div class="checkbox">

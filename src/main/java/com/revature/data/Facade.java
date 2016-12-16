@@ -1,8 +1,6 @@
 package com.revature.data;
 
-import com.revature.beans.Reimbursement;
-import com.revature.beans.Role;
-import com.revature.beans.User;
+import com.revature.beans.*;
 
 import javax.naming.AuthenticationException;
 import javax.naming.NamingException;
@@ -42,25 +40,40 @@ public class Facade {
         return user.getRole();
     }
 
-    public void insert(String username, double amount, String description, String receipt, int statusId, String status, int typeId, String type) throws AuthenticationException {
+    public void insert(String username, double amount, String description, String receipt, ReimbursementStatus status, int typeId) throws AuthenticationException {
         ReimbursementDAO dao = ReimbursementDAOFactory.getInstance(connection);
-        Reimbursement reimbursement = dao.createNewReimbursement(username, amount, description, receipt, statusId, status, typeId, type);
+        Reimbursement reimbursement = dao.createNewReimbursement(username, amount, description, receipt, status, typeId);
         dao.insert(reimbursement);
     }
 
-    public List<Reimbursement> getReimbursements() {
+    public List<Reimbursement> getReimbursements() throws AuthenticationException {
         ReimbursementDAO dao = ReimbursementDAOFactory.getInstance(connection);
         return dao.getReimbursements();
     }
 
-    public Reimbursement getReimbursement(String username) throws AuthenticationException {
+    public List <Reimbursement> getReimbursements(String username) throws AuthenticationException {
         ReimbursementDAO dao = ReimbursementDAOFactory.getInstance(connection);
-        return dao.getReimbursement(username);
+        return dao.getReimbursements(username);
     }
 
     public void modifyReimbursement(int reimbursementId, int statusId) {
         // TODO Auto-generated method stub
         ReimbursementDAO dao = ReimbursementDAOFactory.getInstance(connection);
         dao.modifyReimbursement(reimbursementId, statusId);
+    }
+
+    public List<ReimbursementStatus> getReimbursementStatus() {
+        ReimbursementStatusDAO dao = ReimbursementStatusDAOFactory.getInstance(connection);
+        return dao.getReimbursementStatus();
+    }
+
+    public List<ReimbursementType> getReimbursementTypes() {
+        ReimbursementTypeDAO dao = ReimbursementTypeDAOFactory.getInstance(connection);
+        return dao.getReimbursementTypes();
+    }
+
+    public void changeStatus(int reimbursementId, int reimbursementStatusId) {
+        ReimbursementDAO dao= ReimbursementDAOFactory.getInstance(connection);
+        dao.changeStatus(reimbursementId, reimbursementStatusId);
     }
 }

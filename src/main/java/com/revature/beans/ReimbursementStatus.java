@@ -32,7 +32,8 @@ public class ReimbursementStatus {
     }
 
     public ReimbursementStatus() {
-        super();
+        statusId = 1;
+        status = "Pending";
     }
 
 }

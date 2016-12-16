@@ -1,3 +1,4 @@
+import com.revature.beans.ReimbursementStatus;
 import com.revature.beans.User;
 import com.revature.middle.BusinessDelegate;
 
@@ -20,7 +21,7 @@ public class Main {
             BusinessDelegate businessDelegate = new BusinessDelegate();
             User user = businessDelegate.login(username, password);
             System.out.println("Welcome " + user.getFirstName() + " " + user.getLastName() + " to the reimbursement system");
-            businessDelegate.addReimbursementRequest(username, 14.50, "Soap", "C:/Users/yehur/Desktop/a.gif", 1, "Pending", 4, "OTHER");
+            businessDelegate.addReimbursementRequest(username, 14.50, "Soap", "C:/Users/yehur/Desktop/a.gif", new ReimbursementStatus(), 4);
             System.out.println(businessDelegate.viewAllReimbursements());
         } catch (AuthenticationException e) {
             System.out.println(e.getMessage());
