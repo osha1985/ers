@@ -35,13 +35,6 @@ public class UserService {
         dataTier.insert(username, amount, description, receipt, status, typeId);
     }
 
-    public void approveReimbursement(int reimbursementId, int statusId) {
-        // TODO Auto-generated method stub
-        Facade dataTier = new Facade();
-        dataTier.modifyReimbursement(reimbursementId, statusId);
-
-    }
-
     public List<ReimbursementStatus> getReimbursementStatus() {
         return new Facade().getReimbursementStatus();
     }

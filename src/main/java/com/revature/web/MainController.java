@@ -15,31 +15,25 @@ import java.io.PrintWriter;
 
 public class MainController extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private String username;
-    private String password;
+    private String username = "";
+    private String password = "";
     private User user = null;
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String uri = request.getRequestURI();
         BusinessDelegate businessDelegate = new BusinessDelegate();
         request.setAttribute("reimbursementTypes", businessDelegate.getReimbursementTypes());
         request.setAttribute("reimbursementStatus", businessDelegate.getReimbursementStatus());
-        try {
-            request.setAttribute("reimbursements", businessDelegate.viewAllReimbursements());
-        } catch (AuthenticationException e) {
-            PrintWriter writer = response.getWriter();
-            writer.println(e.getMessage());
-        }
         switch (uri) {
             case "/Project/login": {
-                username = request.getParameter("username");
-                password = request.getParameter("password");
                 try {
+                    username = request.getParameter("username");
+                    password = request.getParameter("password");
                     user = businessDelegate.login(username, password);
                     if (user.getRole().getUserRole().equals("Finance Manager")) {
                         request.setAttribute("reimbursements", businessDelegate.viewAllReimbursements());
                         request.getRequestDispatcher("manager.jsp").forward(request, response);
                     } else {
+                        request.setAttribute("reimbursements", businessDelegate.getReimbursements(username));
                         request.getRequestDispatcher("employee.jsp").forward(request, response);
                     }
                 } catch (AuthenticationException e) {
@@ -81,7 +75,15 @@ public class MainController extends HttpServlet {
                 request.getRequestDispatcher("reimbursementAdded.jsp").forward(request, response);
             }
             case "/Project/manager": {
-                businessDelegate.changeStatus(Integer.parseInt(request.getParameter("reimbursementId")), Integer.parseInt(request.getParameter("reimbursementStatusId")));
+                try {
+                    int reimbursementId = Integer.parseInt(request.getParameter("reimbursementId"));
+                    int reimbursementStatusId = Integer.parseInt(request.getParameter("reimbursementStatusId"));
+                    businessDelegate.changeStatus(reimbursementId, reimbursementStatusId);
+                    request.setAttribute("reimbursements", businessDelegate.viewAllReimbursements());
+                } catch (AuthenticationException e) {
+                    PrintWriter writer = response.getWriter();
+                    writer.println(e.getMessage());
+                }
                 request.getRequestDispatcher("manager.jsp").forward(request, response);
             }
         }

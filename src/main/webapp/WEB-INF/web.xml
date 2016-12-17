@@ -16,5 +16,6 @@
         <url-pattern>/addReimbursement</url-pattern>
         <url-pattern>/viewPastTickets</url-pattern>
         <url-pattern>/reimbursementAdded</url-pattern>
+        <url-pattern>/reimbursementModified</url-pattern>
     </servlet-mapping>
 </web-app>

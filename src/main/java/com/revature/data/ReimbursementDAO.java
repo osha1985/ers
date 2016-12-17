@@ -15,7 +15,6 @@ public interface ReimbursementDAO {
 
     List<Reimbursement> getReimbursements(String username) throws AuthenticationException;
 
-    void modifyReimbursement(int reimbursementId, int statusId);
 
     Reimbursement createNewReimbursement(String username, double amount, String description, String receipt, ReimbursementStatus status, int typeId) throws AuthenticationException;
 

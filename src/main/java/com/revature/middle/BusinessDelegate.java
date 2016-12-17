@@ -17,11 +17,6 @@ public class BusinessDelegate {
         new UserService().addReimbursementRequest(username, amount, description, receipt, status, typeId);
     }
 
-    public void approveReimbursement(int reimbursementId, int statusId) {
-        // TODO Auto-generated method stub
-        new UserService().approveReimbursement(reimbursementId, statusId);
-    }
-
     public List<ReimbursementStatus> getReimbursementStatus() {
         return new UserService().getReimbursementStatus();
     }

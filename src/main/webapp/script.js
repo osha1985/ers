@@ -3,7 +3,7 @@
  */
 $(document).ready(function () {
     $("#filterMenu").change(function () {
-        switch ($("#filterMenu").val()) {
+        switch ($(this).val()) {
             case "All": {
                 $("tr").show();
                 break;
@@ -28,4 +28,5 @@ $(document).ready(function () {
             }
         }
     });
+    $("input").attr('size', $(this).val().length);
 });

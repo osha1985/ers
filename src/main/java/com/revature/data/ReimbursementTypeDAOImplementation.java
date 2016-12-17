@@ -40,17 +40,26 @@ public class ReimbursementTypeDAOImplementation implements ReimbursementTypeDAO 
     @Override
     public List<ReimbursementType> getReimbursementTypes() {
         String sql = "SELECT REIMB_TYPE_ID, REIMB_TYPE FROM ERS_REIMBURSEMENT_TYPE";
-        PreparedStatement statement;
-        ResultSet resultSet;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
         List<ReimbursementType> types = new ArrayList<>();
         try {
             statement = connection.prepareStatement(sql);
+        } catch (SQLException e) {
+            System.out.println("I can't prepare the statement with connection.prepareStatement()");
+        }
+        try {
             resultSet = statement.executeQuery();
+        } catch(SQLException e) {
+            System.out.println("I can't get the result set with statement.executeQuery");
+        }
+
+        try {
             while(resultSet.next()) {
                 types.add(new ReimbursementType(resultSet.getInt("REIMB_TYPE_ID"), resultSet.getString("REIMB_TYPE")));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("I can't get values from the result set");
         }
         return types;
     }

@@ -112,21 +112,6 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
     }
 
     @Override
-    public void modifyReimbursement(int reimbursementId, int statusId) {
-        // TODO Auto-generated method stub
-        String sql = "UPDATE ERS_REIMBURSEMENT SET REIMB_STATUS_ID = ? WHERE REIMB_ID = ?";
-        PreparedStatement preparedStatement;
-        try {
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, statusId);
-            preparedStatement.setInt(2, reimbursementId);
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println("Something went wrong updating the status of the reimbursement");
-        }
-    }
-
-    @Override
     public Reimbursement createNewReimbursement(String username, double amount, String description, String receipt, ReimbursementStatus status, int typeId) throws AuthenticationException {
         UserDAO userDAO = UserDAOFactory.getInstance(connection);
         ReimbursementTypeDAO typeDAO = ReimbursementTypeDAOFactory.getInstance(connection);
@@ -151,6 +136,7 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
             statement.setInt(1,reimbursementStatusId);
             statement.setInt(2,reimbursementId);
             statement.executeUpdate();
+            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }

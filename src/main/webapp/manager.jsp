@@ -10,11 +10,21 @@
     <script src="script.js"></script>
 </head>
 <body>
-
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Employee Reimbursement System</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/Project/">Logout</a></li>
+        </ul>
+    </div>
+</nav>
 <div class="container">
     <div class="form-group">
         <label for="sel1">Filter Reimbursements:</label>
         <select id="filterMenu" class="form-control" id="sel1">
+            <option value="All">All</option>
             <c:forEach var="status" items="${reimbursementStatus}">
                 <option value="${status.status}">${status.status}</option>
             </c:forEach>
@@ -40,15 +50,15 @@
         <tbody>
         <c:forEach var="reimbursement" items="${reimbursements}">
             <form id="reimbursementForm" action="manager" method="post">
-                <tr class=".${reimbursement.status.status}" ">
+                <tr class="${reimbursement.status.status}">
                     <td><input name="reimbursementId" type="text" value="${reimbursement.id}"></td>
-                    <td><input type="text" value="${reimbursement.amount}"></td>
-                    <td><input type="text" value="${reimbursement.submitted}"></td>
-                    <td><input type="text" value="${reimbursement.description}"></td>
-                    <td><input type="text" value="${reimbursement.author.username}"></td>
-                    <td><input type="text" value="${reimbursement.status.status}"></td>
-                    <td><input type="text" value="${reimbursement.type.type}"></td>
-                    <td><select id="filterMenu" class="form-control" id="sel1" name="reimbursementStatusId">
+                    <td>${reimbursement.amount}</td>
+                    <td>${reimbursement.submitted}</td>
+                    <td>${reimbursement.description}</td>
+                    <td>${reimbursement.author.firstName.concat(" ").concat(reimbursement.author.lastName)}</td>
+                    <td>${reimbursement.status.status}</td>
+                    <td>${reimbursement.type.type}</td>
+                    <td><select class="form-control" name="reimbursementStatusId">
                         <c:forEach var="status" items="${reimbursementStatus}">
                             <option value="${status.statusId}">${status.status}</option>
                         </c:forEach>
