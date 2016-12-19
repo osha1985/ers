@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="org.apache.commons.io.IOUtils" %>
+<%@ page import="java.io.FileInputStream" %>
+<%@ page import="java.util.Base64" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,15 +47,17 @@
         </thead>
         <tbody>
         <c:forEach var="reimbursement" items="${reimbursements}">
-            <tr>
-                <td>${reimbursement.id}</td>
-                <td>${reimbursement.amount}</td>
-                <td>${reimbursement.submitted}</td>
-                <td>${reimbursement.description}</td>
-                <td>${reimbursement.author.username}</td>
-                <td>${reimbursement.status.status}</td>
-                <td>${reimbursement.type.type}</td>
-            </tr>
+            <form action="">
+                <tr>
+                    <td><input type="number" value="${reimbursement.id}"></td>
+                    <td>${reimbursement.amount}</td>
+                    <td>${reimbursement.submitted}</td>
+                    <td>${reimbursement.description}</td>
+                    <td>${reimbursement.author.username}</td>
+                    <td>${reimbursement.status.status}</td>
+                    <td>${reimbursement.type.type}</td>
+                </tr>
+            </form>
         </c:forEach>
         </tbody>
     </table>

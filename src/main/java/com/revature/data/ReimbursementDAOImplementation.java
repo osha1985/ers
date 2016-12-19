@@ -115,7 +115,6 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
     public Reimbursement createNewReimbursement(String username, double amount, String description, String receipt, ReimbursementStatus status, int typeId) throws AuthenticationException {
         UserDAO userDAO = UserDAOFactory.getInstance(connection);
         ReimbursementTypeDAO typeDAO = ReimbursementTypeDAOFactory.getInstance(connection);
-
         User user = userDAO.getByUsername(username);
         ReimbursementType type = typeDAO.getReimbursementType(typeId);
         FileInputStream fileInputStream = null;

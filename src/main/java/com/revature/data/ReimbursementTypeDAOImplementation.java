@@ -19,6 +19,7 @@ public class ReimbursementTypeDAOImplementation implements ReimbursementTypeDAO 
         this.connection = connection;
     }
 
+    @Override
     public ReimbursementType getReimbursementType(int typeID) {
         String sql = "SELECT REIMB_TYPE FROM ERS_REIMBURSEMENT_TYPE WHERE REIMB_TYPE_ID = ?";
         PreparedStatement statement;
@@ -53,7 +54,6 @@ public class ReimbursementTypeDAOImplementation implements ReimbursementTypeDAO 
         } catch(SQLException e) {
             System.out.println("I can't get the result set with statement.executeQuery");
         }
-
         try {
             while(resultSet.next()) {
                 types.add(new ReimbursementType(resultSet.getInt("REIMB_TYPE_ID"), resultSet.getString("REIMB_TYPE")));

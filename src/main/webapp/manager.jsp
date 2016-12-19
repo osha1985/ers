@@ -7,7 +7,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#filterMenu").change(function () {
+                switch ($(this).val()) {
+                    case "All": {
+                        $("tr").show();
+                        break;
+                    }
+                    <c:forEach var="status" items="${reimbursementStatus}">
+                    case "${status.status}": {
+                        $("tr").hide();
+                        $(".${status.status}").show();
+                        break;
+                    }
+                    </c:forEach>
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -51,7 +69,7 @@
         <c:forEach var="reimbursement" items="${reimbursements}">
             <form id="reimbursementForm" action="manager" method="post">
                 <tr class="${reimbursement.status.status}">
-                    <td><input name="reimbursementId" type="text" value="${reimbursement.id}"></td>
+                    <td><input name="reimbursementId" type="number" value="${reimbursement.id}"></td>
                     <td>${reimbursement.amount}</td>
                     <td>${reimbursement.submitted}</td>
                     <td>${reimbursement.description}</td>

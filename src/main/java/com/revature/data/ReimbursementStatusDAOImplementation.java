@@ -20,6 +20,7 @@ public class ReimbursementStatusDAOImplementation implements ReimbursementStatus
         this.connection = connection;
     }
 
+    @Override
     public ReimbursementStatus getReimbursementStatus(int statusId) {
         String sql = "SELECT REIMB_STATUS FROM ERS_REIMBURSEMENT_STATUS WHERE REIMB_STATUS_ID = ?";
         PreparedStatement statement;

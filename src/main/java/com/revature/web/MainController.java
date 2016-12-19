@@ -65,7 +65,7 @@ public class MainController extends HttpServlet {
                     businessDelegate.addReimbursementRequest(username,
                             Double.parseDouble(request.getParameter("reimbursementAmount")),
                             request.getParameter("reimbursementDescription"),
-                            "C:/Users/yehur/Desktop/a.gif",
+                            "C:/Users/yehur/IdeaProjects/Project/src/main/resources/images/soap.png",
                             new ReimbursementStatus(),
                             Integer.parseInt(request.getParameter("reimbursementType")));
                 } catch (AuthenticationException e) {

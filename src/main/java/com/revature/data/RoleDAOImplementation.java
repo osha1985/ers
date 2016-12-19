@@ -11,6 +11,7 @@ import java.sql.SQLException;
 public class RoleDAOImplementation implements RoleDAO {
     Connection connection = null;
 
+    @Override
     public Role getRole(int roleID) {
         String sql = "SELECT USER_ROLE FROM ERS_USER_ROLES WHERE ERS_USER_ROLE_ID = ?";
         PreparedStatement statement;

@@ -8,40 +8,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d13ea6c9-150e-48a1-b899-cfd64a492f17" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/revature/web/FileUploadHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project.war" afterPath="$PROJECT_DIR$/target/Project.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/data/Facade.class" afterPath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/data/Facade.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/data/ReimbursementDAO.class" afterPath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/data/ReimbursementDAO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/data/ReimbursementDAOImplementation.class" afterPath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/data/ReimbursementDAOImplementation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/data/ReimbursementStatusDAOImplementation.class" afterPath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/data/ReimbursementStatusDAOImplementation.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/data/ReimbursementTypeDAOImplementation.class" afterPath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/data/ReimbursementTypeDAOImplementation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/middle/BusinessDelegate.class" afterPath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/middle/BusinessDelegate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/middle/UserService.class" afterPath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/middle/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/web/MainController.class" afterPath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/web/MainController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revature/data/Facade.class" afterPath="$PROJECT_DIR$/target/classes/com/revature/data/Facade.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revature/data/ReimbursementDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/revature/data/ReimbursementDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/data/RoleDAOImplementation.class" afterPath="$PROJECT_DIR$/target/Project/WEB-INF/classes/com/revature/data/RoleDAOImplementation.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revature/data/ReimbursementDAOImplementation.class" afterPath="$PROJECT_DIR$/target/classes/com/revature/data/ReimbursementDAOImplementation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revature/data/ReimbursementStatusDAOImplementation.class" afterPath="$PROJECT_DIR$/target/classes/com/revature/data/ReimbursementStatusDAOImplementation.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revature/data/ReimbursementTypeDAOImplementation.class" afterPath="$PROJECT_DIR$/target/classes/com/revature/data/ReimbursementTypeDAOImplementation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revature/middle/BusinessDelegate.class" afterPath="$PROJECT_DIR$/target/classes/com/revature/middle/BusinessDelegate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revature/middle/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/revature/middle/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revature/web/MainController.class" afterPath="$PROJECT_DIR$/target/classes/com/revature/web/MainController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revature/data/RoleDAOImplementation.class" afterPath="$PROJECT_DIR$/target/classes/com/revature/data/RoleDAOImplementation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Project_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Project_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revature/data/Facade.java" afterPath="$PROJECT_DIR$/src/main/java/com/revature/data/Facade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project.iml" afterPath="$PROJECT_DIR$/Project.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementDAOImplementation.java" afterPath="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementDAOImplementation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementStatusDAOImplementation.java" afterPath="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementStatusDAOImplementation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementTypeDAOImplementation.java" afterPath="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementTypeDAOImplementation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revature/middle/BusinessDelegate.java" afterPath="$PROJECT_DIR$/src/main/java/com/revature/middle/BusinessDelegate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revature/middle/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/revature/middle/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revature/data/RoleDAOImplementation.java" afterPath="$PROJECT_DIR$/src/main/java/com/revature/data/RoleDAOImplementation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revature/web/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/com/revature/web/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/employee.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/employee.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/manager.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/manager.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/reimbursementAdded.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/reimbursementAdded.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/script.js" afterPath="$PROJECT_DIR$/src/main/webapp/script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/viewPastTickets.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/viewPastTickets.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/Project/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/WEB-INF/classes/database.properties" afterPath="$PROJECT_DIR$/target/Project/WEB-INF/classes/database.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/WEB-INF/classes/pom.xml" afterPath="$PROJECT_DIR$/target/Project/WEB-INF/classes/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/Project/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/addreimbursement.jsp" afterPath="$PROJECT_DIR$/target/Project/addreimbursement.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/employee.jsp" afterPath="$PROJECT_DIR$/target/Project/employee.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/index.jsp" afterPath="$PROJECT_DIR$/target/Project/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/manager.jsp" afterPath="$PROJECT_DIR$/target/Project/manager.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/reimbursementAdded.jsp" afterPath="$PROJECT_DIR$/target/Project/reimbursementAdded.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/script.js" afterPath="$PROJECT_DIR$/target/Project/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Project/viewPastTickets.jsp" afterPath="$PROJECT_DIR$/target/Project/viewPastTickets.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/database.properties" afterPath="$PROJECT_DIR$/target/classes/database.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pom.xml" afterPath="$PROJECT_DIR$/target/classes/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,34 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Facade.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/Facade.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1716">
-              <caret line="84" column="21" lean-forward="false" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReimbursementTypeDAOImplementation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementTypeDAOImplementation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="53" column="53" lean-forward="false" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
-              <folding>
-                <marker date="1481930101530" expanded="true" signature="608:677" ph="SELECT REIMB... ERS_REIMBURSEMENT_TYPE" />
-                <marker date="1481930101530" expanded="true" signature="1254:1314" ph="SELECT REIMB... ERS_REIMBURSEMENT_TYPE" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/web/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="424">
+              <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,11 +81,68 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="FileUploadHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/web/FileUploadHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReimbursementDAOImplementation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementDAOImplementation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1144">
+              <caret line="66" column="67" lean-forward="true" selection-start-line="66" selection-start-column="67" selection-end-line="66" selection-end-column="67" />
+              <folding>
+                <marker date="1482107098294" expanded="true" signature="786:998" ph="INSERT INTO ERS_REIMBURSEMENT... " />
+                <marker date="1482107098294" expanded="true" signature="2014:2045" ph="SELECT * FRO... ERS_REIMBURSEMENT" />
+                <marker date="1482107098294" expanded="true" signature="3950:4004" ph="SELECT * FRO... ERS_REIMBURSEMENT" />
+                <marker date="1482107098294" expanded="true" signature="6328:6395" ph="UPDATE ERS_R... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewPastTickets.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/viewPastTickets.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="968">
+              <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BusinessDelegate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/middle/BusinessDelegate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/middle/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="manager.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/manager.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+            <state relative-caret-position="352">
+              <caret line="85" column="25" lean-forward="false" selection-start-line="83" selection-start-column="20" selection-end-line="85" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -117,51 +151,19 @@
       <file leaf-file-name="employee.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/employee.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="170">
               <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="viewPastTickets.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/viewPastTickets.jsp">
+      <file leaf-file-name="addReimbursement.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/addReimbursement.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="45" column="65" lean-forward="true" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
+            <state relative-caret-position="-154">
+              <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/beans/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="30" column="50" lean-forward="true" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#42#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -169,7 +171,7 @@
       <file leaf-file-name="reimbursementAdded.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/reimbursementAdded.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="94">
               <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="51" />
               <folding />
             </state>
@@ -202,7 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ReimbursementDAOFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/ReimbursementDAOImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/ServiceLocator.java" />
         <option value="$PROJECT_DIR$/src/main/java/UserDAO.java" />
@@ -211,7 +212,6 @@
         <option value="$PROJECT_DIR$/src/main/java/BusinessDelegate.java" />
         <option value="$PROJECT_DIR$/src/main/java/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/database.properties" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/addreimbursement.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/RoleDAO.java" />
@@ -224,7 +224,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/revature/data/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revature/data/RoleDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revature/data/RoleDAOFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/revature/data/RoleDAOImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revature/beans/Reimbursement.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementDAOFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revature/beans/User.java" />
@@ -232,13 +231,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementTypeDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementStatusDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementStatusDAOImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revature/beans/ReimbursementStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revature/data/UserDAOImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/addReimbursement.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementTypeDAOImplementation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementDAOImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revature/middle/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revature/middle/BusinessDelegate.java" />
@@ -247,12 +242,19 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/revature/data/Facade.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/script.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/manager.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/reimbursementAdded.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/viewPastTickets.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/employee.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/revature/web/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementStatusDAOImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementTypeDAOImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/revature/data/RoleDAOImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/revature/web/FileUploadHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/manager.jsp" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementDAOImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/viewPastTickets.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/revature/web/MainController.java" />
       </list>
     </option>
   </component>
@@ -341,6 +343,218 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="revature" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="revature" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="middle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="revature" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="revature" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beans" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -932,12 +1146,12 @@
       <workItem from="1481729193848" duration="22468000" />
       <workItem from="1481807779461" duration="402000" />
       <workItem from="1481808413178" duration="26444000" />
-      <workItem from="1481923735362" duration="27687000" />
+      <workItem from="1481923735362" duration="49120000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120710000" />
+    <option name="totallyTimeSpent" value="142143000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -949,12 +1163,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36663008" sideWeight="0.21354167" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36663008" sideWeight="0.21666667" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49710566" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -966,15 +1180,15 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.459375" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.45729166" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36663008" sideWeight="0.7864583" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36663008" sideWeight="0.78333336" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.72270364" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.72270364" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.27729636" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1000,8 +1214,14 @@
           <line>23</line>
           <properties />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/revature/web/FileUploadHandler.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1010,13 +1230,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/UserDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/middle/BusinessDelegate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1140,13 +1353,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/RoleDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementDAOFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -1199,46 +1405,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="23" column="138" lean-forward="false" selection-start-line="23" selection-start-column="138" selection-end-line="23" selection-end-column="138" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/beans/Reimbursement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="6" column="71" lean-forward="false" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="21" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/UserDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding>
-            <marker date="1481817619382" expanded="true" signature="642:688" ph="SELECT * FRO... ERS_USERS" />
-            <marker date="1481817619382" expanded="true" signature="1870:1916" ph="SELECT * FRO... ERS_USERS" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1250,58 +1421,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementStatusDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
-          <folding>
-            <marker date="1481809464624" expanded="true" signature="631:706" ph="SELECT REIMB... ERS_REIMBURSEMENT_STATUS" />
-            <marker date="1481809464624" expanded="true" signature="1300:1366" ph="SELECT REIMB... ERS_REIMBURSEMENT_STATUS" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-          <folding>
-            <marker date="1481931021053" expanded="true" signature="786:998" ph="INSERT INTO ERS_REIMBURSEMENT... " />
-            <marker date="1481931021053" expanded="true" signature="2014:2045" ph="SELECT * FRO... ERS_REIMBURSEMENT" />
-            <marker date="1481931021053" expanded="true" signature="3950:4004" ph="SELECT * FRO... ERS_REIMBURSEMENT" />
-            <marker date="1481931021053" expanded="true" signature="6329:6396" ph="UPDATE ERS_R... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/middle/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/middle/BusinessDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/addReimbursement.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1330,35 +1453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementTypeDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="53" column="53" lean-forward="false" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
-          <folding>
-            <marker date="1481930101530" expanded="true" signature="608:677" ph="SELECT REIMB... ERS_REIMBURSEMENT_TYPE" />
-            <marker date="1481930101530" expanded="true" signature="1254:1314" ph="SELECT REIMB... ERS_REIMBURSEMENT_TYPE" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/Facade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1716">
-          <caret line="84" column="21" lean-forward="false" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="30" column="50" lean-forward="true" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/beans/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1367,53 +1461,188 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/manager.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        <state relative-caret-position="132">
+          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/reimbursementAdded.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/Facade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementStatusDAOImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <marker date="1482052484347" expanded="true" signature="645:720" ph="SELECT REIMB... ERS_REIMBURSEMENT_STATUS" />
+            <marker date="1482052484347" expanded="true" signature="1314:1380" ph="SELECT REIMB... ERS_REIMBURSEMENT_STATUS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementTypeDAOImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1482052484300" expanded="true" signature="622:691" ph="SELECT REIMB... ERS_REIMBURSEMENT_TYPE" />
+            <marker date="1482052484300" expanded="true" signature="1268:1328" ph="SELECT REIMB... ERS_REIMBURSEMENT_TYPE" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/RoleDAOImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <marker date="1482052582863" expanded="true" signature="348:411" ph="SELECT USER_... ERS_USER_ROLES" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/UserDAOImplementation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="51" />
+          <caret line="25" column="45" lean-forward="false" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding>
+            <marker date="1481817619382" expanded="true" signature="642:688" ph="SELECT * FRO... ERS_USERS" />
+            <marker date="1481817619382" expanded="true" signature="1870:1916" ph="SELECT * FRO... ERS_USERS" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/beans/Reimbursement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/employee.jsp">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+        <state relative-caret-position="314">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/viewPastTickets.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="45" column="65" lean-forward="true" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/web/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        <state relative-caret-position="88">
+          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/data/ReimbursementDAOImplementation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        <state relative-caret-position="1144">
+          <caret line="66" column="67" lean-forward="true" selection-start-line="66" selection-start-column="67" selection-end-line="66" selection-end-column="67" />
+          <folding>
+            <marker date="1482107098294" expanded="true" signature="786:998" ph="INSERT INTO ERS_REIMBURSEMENT... " />
+            <marker date="1482107098294" expanded="true" signature="2014:2045" ph="SELECT * FRO... ERS_REIMBURSEMENT" />
+            <marker date="1482107098294" expanded="true" signature="3950:4004" ph="SELECT * FRO... ERS_REIMBURSEMENT" />
+            <marker date="1482107098294" expanded="true" signature="6328:6395" ph="UPDATE ERS_R... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/middle/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/web/FileUploadHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/viewPastTickets.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="44" column="25" lean-forward="false" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/middle/BusinessDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/reimbursementAdded.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/manager.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="85" column="25" lean-forward="false" selection-start-line="83" selection-start-column="20" selection-end-line="85" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/employee.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/addReimbursement.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-154">
+          <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revature/web/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
