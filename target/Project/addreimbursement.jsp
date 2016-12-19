@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1"%>
+         pageEncoding="ISO-8859-1" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +34,7 @@
     <form action="reimbursementAdded" method="post">
         <div class="form-group">
             <label for="amount">Reimbursement amount:</label> <input
-                type="number" class="form-control" id="amount"
+                type="text" class="form-control" id="amount"
                 placeholder="Reimbursement amount" name="reimbursementAmount">
         </div>
         <div class="form-group">

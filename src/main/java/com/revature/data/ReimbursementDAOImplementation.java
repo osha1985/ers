@@ -6,9 +6,9 @@ import com.revature.beans.ReimbursementType;
 import com.revature.beans.User;
 
 import javax.naming.AuthenticationException;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import javax.sql.rowset.serial.SerialBlob;
+import javax.sql.rowset.serial.SerialException;
+import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -33,7 +33,7 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
             statement.setDouble(1, reimbursement.getAmount());
             statement.setTimestamp(2, reimbursement.getSubmitted());
             statement.setString(3, reimbursement.getDescription());
-            statement.setBlob(4, reimbursement.getReceipt());
+            statement.setBlob(4, reimbursement.getReceipt().getBinaryStream());
             statement.setInt(5, reimbursement.getAuthor().getUserId());
             statement.setInt(6, reimbursement.getStatus().getStatusId());
             statement.setInt(7, reimbursement.getType().getTypeId());
@@ -64,7 +64,7 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
                         resultSet.getTimestamp("REIMB_SUBMITTED"),
                         resultSet.getTimestamp("REIMB_RESOLVED"),
                         resultSet.getString("REIMB_DESCRIPTION"),
-                        resultSet.getBinaryStream("REIMB_RECEIPT"),
+                        resultSet.getBlob("REIMB_RECEIPT"),
                         userDAO.getByUserId(resultSet.getInt("REIMB_AUTHOR")),
                         null,
                         statusDAO.getReimbursementStatus(resultSet.getInt("REIMB_STATUS_ID")),
@@ -98,7 +98,7 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
                         resultSet.getTimestamp("REIMB_SUBMITTED"),
                         resultSet.getTimestamp("REIMB_RESOLVED"),
                         resultSet.getString("REIMB_DESCRIPTION"),
-                        resultSet.getBinaryStream("REIMB_RECEIPT"),
+                        resultSet.getBlob("REIMB_RECEIPT"),
                         userDAO.getByUserId(resultSet.getInt("REIMB_AUTHOR")),
                         null,
                         statusDAO.getReimbursementStatus(resultSet.getInt("REIMB_STATUS_ID")),
@@ -117,23 +117,38 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
         ReimbursementTypeDAO typeDAO = ReimbursementTypeDAOFactory.getInstance(connection);
         User user = userDAO.getByUsername(username);
         ReimbursementType type = typeDAO.getReimbursementType(typeId);
-        FileInputStream fileInputStream = null;
+        File file = new File(receipt);
+        byte [] image = new byte [(int) file.length()];
+        Blob blob = null;
         try {
-            fileInputStream = new FileInputStream(new File(receipt));
+            BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(file));
+            bufferedInputStream.read(image);
+            blob = new SerialBlob(image);
+            bufferedInputStream.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+        } catch (SerialException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return new Reimbursement(user.getUserId(), amount, new Timestamp(new Date().getTime()), null, description, fileInputStream, user, null, status, type);
+        return new Reimbursement(user.getUserId(), amount, new Timestamp(new Date().getTime()), null, description, blob, user, null, status, type);
     }
 
     @Override
-    public void changeStatus(int reimbursementId, int reimbursementStatusId) {
-        String sql = "UPDATE ERS_REIMBURSEMENT SET REIMB_STATUS_ID = ? WHERE REIMB_ID = ?";
+    public void changeStatus(int reimbursementId, int reimbursementStatusId, String username) throws AuthenticationException {
+        String sql = "UPDATE ERS_REIMBURSEMENT SET REIMB_STATUS_ID = ?, REIMB_RESOLVER = ?, REIMB_RESOLVED = ? WHERE REIMB_ID = ?";
+        UserDAO userDAO = UserDAOFactory.getInstance(connection);
+        User user = userDAO.getByUsername(username);
         PreparedStatement statement;
         try {
             statement = connection.prepareStatement(sql);
             statement.setInt(1,reimbursementStatusId);
-            statement.setInt(2,reimbursementId);
+            statement.setInt(2,user.getUserId());
+            statement.setTimestamp(3, new Timestamp(new Date().getTime()));
+            statement.setInt(4,reimbursementId);
             statement.executeUpdate();
             connection.commit();
         } catch (SQLException e) {

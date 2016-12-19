@@ -34,7 +34,7 @@ public class BusinessDelegate {
         return new UserService().getReimbursements(username);
     }
 
-    public void changeStatus(int reimbursementId, int reimbursementStatusId) {
-        new UserService().changeStatus(reimbursementId, reimbursementStatusId);
+    public void changeStatus(int reimbursementId, int reimbursementStatusId, String username) throws AuthenticationException {
+        new UserService().changeStatus(reimbursementId, reimbursementStatusId, username);
     }
 }

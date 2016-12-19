@@ -1,5 +1,6 @@
 package com.revature.beans;
-import java.io.InputStream;
+
+import java.sql.Blob;
 import java.sql.Timestamp;
 
 public class Reimbursement {
@@ -17,7 +18,7 @@ public class Reimbursement {
     private Timestamp submitted;
     private Timestamp resolved;
     private String description;
-    private InputStream receipt;
+    private Blob receipt;
     private User author;
     private User resolver;
     private ReimbursementStatus status;
@@ -63,11 +64,11 @@ public class Reimbursement {
         this.description = description;
     }
 
-    public InputStream getReceipt() {
+    public Blob getReceipt() {
         return receipt;
     }
 
-    public void setReceipt(InputStream receipt) {
+    public void setReceipt(Blob receipt) {
         this.receipt = receipt;
     }
 
@@ -104,7 +105,7 @@ public class Reimbursement {
     }
 
     public Reimbursement(int id, double amount, Timestamp submitted, Timestamp resolved, String description,
-                         InputStream receipt, User author, User resolver, ReimbursementStatus status, ReimbursementType type) {
+                         Blob receipt, User author, User resolver, ReimbursementStatus status, ReimbursementType type) {
         this.id = id;
         this.amount = amount;
         this.submitted = submitted;

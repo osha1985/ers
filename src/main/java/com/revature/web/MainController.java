@@ -78,7 +78,7 @@ public class MainController extends HttpServlet {
                 try {
                     int reimbursementId = Integer.parseInt(request.getParameter("reimbursementId"));
                     int reimbursementStatusId = Integer.parseInt(request.getParameter("reimbursementStatusId"));
-                    businessDelegate.changeStatus(reimbursementId, reimbursementStatusId);
+                    businessDelegate.changeStatus(reimbursementId, reimbursementStatusId, username);
                     request.setAttribute("reimbursements", businessDelegate.viewAllReimbursements());
                 } catch (AuthenticationException e) {
                     PrintWriter writer = response.getWriter();

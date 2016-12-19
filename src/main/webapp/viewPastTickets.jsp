@@ -49,7 +49,7 @@
         <c:forEach var="reimbursement" items="${reimbursements}">
             <form action="">
                 <tr>
-                    <td><input type="number" value="${reimbursement.id}"></td>
+                    <td><input type="text" value="${reimbursement.id}" readonly></td>
                     <td>${reimbursement.amount}</td>
                     <td>${reimbursement.submitted}</td>
                     <td>${reimbursement.description}</td>

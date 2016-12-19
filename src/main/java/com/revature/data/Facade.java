@@ -85,9 +85,9 @@ public class Facade {
         return types;
     }
 
-    public void changeStatus(int reimbursementId, int reimbursementStatusId) {
+    public void changeStatus(int reimbursementId, int reimbursementStatusId, String username) throws AuthenticationException {
         ReimbursementDAO dao = ReimbursementDAOFactory.getInstance(connection);
-        dao.changeStatus(reimbursementId, reimbursementStatusId);
+        dao.changeStatus(reimbursementId, reimbursementStatusId, username);
         closeConnection();
     }
     private void closeConnection() {

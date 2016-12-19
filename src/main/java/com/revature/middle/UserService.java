@@ -47,7 +47,7 @@ public class UserService {
         return new Facade().getReimbursements(username);
     }
 
-    public void changeStatus(int reimbursementId, int reimbursementStatusId) {
-        new Facade().changeStatus(reimbursementId, reimbursementStatusId);
+    public void changeStatus(int reimbursementId, int reimbursementStatusId, String username) throws AuthenticationException {
+        new Facade().changeStatus(reimbursementId, reimbursementStatusId, username);
     }
 }
