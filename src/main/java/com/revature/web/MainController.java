@@ -65,7 +65,7 @@ public class MainController extends HttpServlet {
                     businessDelegate.addReimbursementRequest(username,
                             Double.parseDouble(request.getParameter("reimbursementAmount")),
                             request.getParameter("reimbursementDescription"),
-                            "C:/Users/yehur/IdeaProjects/Project/src/main/resources/images/soap.png",
+                            request.getParameter("reimbursementReceipt"),
                             new ReimbursementStatus(),
                             Integer.parseInt(request.getParameter("reimbursementType")));
                 } catch (AuthenticationException e) {
@@ -73,6 +73,7 @@ public class MainController extends HttpServlet {
                     writer.println(e.getMessage());
                 }
                 request.getRequestDispatcher("reimbursementAdded.jsp").forward(request, response);
+                break;
             }
             case "/Project/manager": {
                 try {

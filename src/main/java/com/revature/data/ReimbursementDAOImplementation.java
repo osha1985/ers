@@ -7,10 +7,9 @@ import com.revature.beans.User;
 
 import javax.naming.AuthenticationException;
 import javax.sql.rowset.serial.SerialBlob;
-import javax.sql.rowset.serial.SerialException;
-import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 
@@ -33,7 +32,7 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
             statement.setDouble(1, reimbursement.getAmount());
             statement.setTimestamp(2, reimbursement.getSubmitted());
             statement.setString(3, reimbursement.getDescription());
-            statement.setBlob(4, reimbursement.getReceipt().getBinaryStream());
+            statement.setBlob(4, base64StringToBlob(reimbursement.getReceipt()).getBinaryStream());
             statement.setInt(5, reimbursement.getAuthor().getUserId());
             statement.setInt(6, reimbursement.getStatus().getStatusId());
             statement.setInt(7, reimbursement.getType().getTypeId());
@@ -64,7 +63,7 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
                         resultSet.getTimestamp("REIMB_SUBMITTED"),
                         resultSet.getTimestamp("REIMB_RESOLVED"),
                         resultSet.getString("REIMB_DESCRIPTION"),
-                        resultSet.getBlob("REIMB_RECEIPT"),
+                        blobToBase64String(resultSet.getBlob("REIMB_RECEIPT")),
                         userDAO.getByUserId(resultSet.getInt("REIMB_AUTHOR")),
                         null,
                         statusDAO.getReimbursementStatus(resultSet.getInt("REIMB_STATUS_ID")),
@@ -98,7 +97,7 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
                         resultSet.getTimestamp("REIMB_SUBMITTED"),
                         resultSet.getTimestamp("REIMB_RESOLVED"),
                         resultSet.getString("REIMB_DESCRIPTION"),
-                        resultSet.getBlob("REIMB_RECEIPT"),
+                        blobToBase64String(resultSet.getBlob("REIMB_RECEIPT")),
                         userDAO.getByUserId(resultSet.getInt("REIMB_AUTHOR")),
                         null,
                         statusDAO.getReimbursementStatus(resultSet.getInt("REIMB_STATUS_ID")),
@@ -117,24 +116,7 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
         ReimbursementTypeDAO typeDAO = ReimbursementTypeDAOFactory.getInstance(connection);
         User user = userDAO.getByUsername(username);
         ReimbursementType type = typeDAO.getReimbursementType(typeId);
-        File file = new File(receipt);
-        byte [] image = new byte [(int) file.length()];
-        Blob blob = null;
-        try {
-            BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(file));
-            bufferedInputStream.read(image);
-            blob = new SerialBlob(image);
-            bufferedInputStream.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (SerialException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return new Reimbursement(user.getUserId(), amount, new Timestamp(new Date().getTime()), null, description, blob, user, null, status, type);
+        return new Reimbursement(user.getUserId(), amount, new Timestamp(new Date().getTime()), null, description, receipt, user, null, status, type);
     }
 
     @Override
@@ -154,6 +136,25 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private String blobToBase64String(Blob blob) {
+        String string = "";
+        try {
+            string = Base64.getEncoder().encodeToString(blob.getBytes(1,(int)blob.length()));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return string;
+    }
+    private Blob base64StringToBlob(String base64) {
+       Blob blob = null;
+        try {
+            blob = new SerialBlob(Base64.getDecoder().decode(base64));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return blob;
     }
 
 }

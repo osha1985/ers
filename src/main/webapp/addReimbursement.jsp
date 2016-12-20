@@ -7,12 +7,10 @@
     <title>Bootstrap Case</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
 
@@ -43,7 +41,7 @@
                       placeholder="Enter description" name="reimbursementDescription"></textarea>
         </div>
         <div class="form-group">
-            <label for="receipt">Receipt:</label> <input type="file" id="receipt" name="reimbursementReceipt">
+            <label for="receipt">Receipt:</label> <input type="file" id="receipt" onchange="saveFile()">
         </div>
         <div class="form-group">
             <label for="sel1">Reimbursement type:</label>
@@ -53,11 +51,13 @@
                 </c:forEach>
             </select>
         </div>
+        <input type="hidden" name="reimbursementReceipt">
         <div class="checkbox">
             <label><input type="checkbox"> Remember me</label>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
+    <img src="" height="200" alt="Image preview...">
 </div>
 
 </body>

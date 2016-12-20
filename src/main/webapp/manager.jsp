@@ -61,6 +61,7 @@
             <th>Author</th>
             <th>Status</th>
             <th>Type</th>
+            <th>Receipt</th>
             <th>Change status</th>
             <th>Submit changes</th>
         </tr>
@@ -69,13 +70,14 @@
         <c:forEach var="reimbursement" items="${reimbursements}">
             <form id="reimbursementForm" action="manager" method="post">
                 <tr class="${reimbursement.status.status}">
-                    <td><input name="reimbursementId" type="number" value="${reimbursement.id}"></td>
+                    <td>${reimbursement.id}</td>
                     <td>${reimbursement.amount}</td>
                     <td>${reimbursement.submitted}</td>
                     <td>${reimbursement.description}</td>
                     <td>${reimbursement.author.firstName.concat(" ").concat(reimbursement.author.lastName)}</td>
                     <td>${reimbursement.status.status}</td>
                     <td>${reimbursement.type.type}</td>
+                    <td><img src="data:image/png;base64,${reimbursement.receipt}" alt=""></td>
                     <td><select class="form-control" name="reimbursementStatusId">
                         <c:forEach var="status" items="${reimbursementStatus}">
                             <option value="${status.statusId}">${status.status}</option>
@@ -85,6 +87,7 @@
                         <button type="submit" class="btn btn-default">Submit</button>
                     </td>
                 </tr>
+                <input name="reimbursementId" type="hidden" value="${reimbursement.id}">
             </form>
         </c:forEach>
         </tbody>
