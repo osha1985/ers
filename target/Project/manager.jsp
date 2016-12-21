@@ -17,7 +17,7 @@
                     }
                     <c:forEach var="status" items="${reimbursementStatus}">
                     case "${status.status}": {
-                        $("tr").hide();
+                        $("tbody tr").hide();
                         $(".${status.status}").show();
                         break;
                     }
@@ -77,7 +77,7 @@
                     <td>${reimbursement.author.firstName.concat(" ").concat(reimbursement.author.lastName)}</td>
                     <td>${reimbursement.status.status}</td>
                     <td>${reimbursement.type.type}</td>
-                    <td><img src="data:image/png;base64,${reimbursement.receipt}" alt=""></td>
+                    <td><a download="receipt.png" href="data:image/png;base64,${reimbursement.receipt}" alt="">Download</td>
                     <td><select class="form-control" name="reimbursementStatusId">
                         <c:forEach var="status" items="${reimbursementStatus}">
                             <option value="${status.statusId}">${status.status}</option>
