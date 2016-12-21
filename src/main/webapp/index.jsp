@@ -6,31 +6,28 @@
     <title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/b994f4443b.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
 <div class="container">
-    <h2>Expense Reimbursement System Login</h2>
-    <form action="login" method="post">
-        <div class="form-group">
-            <label for="uname">UserName:</label> <input type="text"
-                                                        class="form-control" id="uname" name="username"
-                                                        placeholder="Enter username">
-        </div>
-        <div class="form-group">
-            <label for="pwd">Password:</label> <input type="password"
-                                                      class="form-control" id="pwd" name="password"
-                                                      placeholder="Enter password">
-        </div>
+    <form class="form-signin" action="login" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="username" class="sr-only">User Name</label>
+        <input type="text" id="username" class="form-control" placeholder="User Name" required="" name="username" autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required="">
         <div class="checkbox">
-            <label><input type="checkbox"> Remember me</label>
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     </form>
 </div>
 </body>
