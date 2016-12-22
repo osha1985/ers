@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/additional-methods.min.js"></script>
+    <script src="scripts/addReimbursement.js"></script>
 </head>
 <body>
 
@@ -22,26 +24,30 @@
         <ul class="nav navbar-nav">
             <li><a href="/Project/viewPastTickets">View Past Tickets</a></li>
             <li><a href="#">Add Reimbursement request</a></li>
-            <li><a href="/Project/">Logout</a></li>
+            <li><a href="/Project/logout">Logout</a></li>
         </ul>
     </div>
 </nav>
 
 <div class="container">
     <h2>Please enter the fields specified to submit your request</h2>
-    <form action="reimbursementAdded" method="post">
+    <form action="reimbursementAdded" method="post" id="reimbursementForm">
         <div class="form-group">
-            <label for="amount">Reimbursement amount:</label> <input
-                type="text" class="form-control" id="amount"
-                placeholder="Reimbursement amount" name="reimbursementAmount">
+            <label for="amount">Reimbursement amount:</label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input type="number" class="form-control" id="amount"
+                       placeholder="Reimbursement amount" name="reimbursementAmount" step="0.01" required>
+            </div>
+
         </div>
         <div class="form-group">
             <label for="description">Description:</label>
             <textarea rows="5" type="text" class="form-control" id="description"
-                      placeholder="Enter description" name="reimbursementDescription"></textarea>
+                      placeholder="Enter description" name="reimbursementDescription" required></textarea>
         </div>
         <div class="form-group">
-            <label for="receipt">Receipt:</label> <input type="file" id="receipt" onchange="saveFile()">
+            <label for="receipt">Receipt:</label><input type="file" id="receipt" accept='image/*' required>
         </div>
         <div class="form-group">
             <label for="sel1">Reimbursement type:</label>
@@ -51,13 +57,13 @@
                 </c:forEach>
             </select>
         </div>
-        <input type="hidden" name="reimbursementReceipt">
+        <input id="receiptStore" type="hidden" name="reimbursementReceipt">
         <div class="checkbox">
             <label><input type="checkbox"> Remember me</label>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
-    <img src="" height="200" alt="Image preview...">
+
 </div>
 
 </body>

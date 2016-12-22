@@ -35,6 +35,10 @@ public class FrontController extends HttpServlet {
                 new ManagerController().doAll(request, response);
                 break;
             }
+            case "/Project/logout": {
+                new LogoutController().doAll(request, response);
+                break;
+            }
         }
     }
 

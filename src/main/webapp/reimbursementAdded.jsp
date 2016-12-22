@@ -24,7 +24,7 @@
         <ul class="nav navbar-nav">
             <li><a href="/Project/viewPastTickets">View Past Tickets</a></li>
             <li><a href="/Project/addReimbursement">Add Reimbursement request</a></li>
-            <li><a href="/Project/">Logout</a></li>
+            <li><a href="/Project/logout">Logout</a></li>
         </ul>
     </div>
 </nav>

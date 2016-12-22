@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="scripts/manager.js"></script>
     <script>
         $(document).ready(function () {
-            $("#filterMenu").change(function () {
+            $('#filterMenu').change(function () {
                 switch ($(this).val()) {
                     case "All": {
                         $("tr").show();
@@ -34,7 +35,7 @@
             <a class="navbar-brand" href="#">Employee Reimbursement System</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="/Project/">Logout</a></li>
+            <li><a href="/Project/logout">Logout</a></li>
         </ul>
     </div>
 </nav>
@@ -57,11 +58,13 @@
             <th>ID</th>
             <th>Amount</th>
             <th>Submitted</th>
+            <th>Resolved</th>
             <th>Description</th>
+            <th>Receipt</th>
             <th>Author</th>
+            <th>Resolver</th>
             <th>Status</th>
             <th>Type</th>
-            <th>Receipt</th>
             <th>Change status</th>
             <th>Submit changes</th>
         </tr>
@@ -71,13 +74,15 @@
             <form id="reimbursementForm" action="manager" method="post">
                 <tr class="${reimbursement.status.status}">
                     <td>${reimbursement.id}</td>
-                    <td>${reimbursement.amount}</td>
+                    <td class="reimbursementAmount">${reimbursement.amount}</td>
                     <td>${reimbursement.submitted}</td>
+                    <td>${reimbursement.resolved}</td>
                     <td>${reimbursement.description}</td>
+                    <td><a download="receipt.png" href="data:image/png;base64,${reimbursement.receipt}" alt="">Download</a></td>
                     <td>${reimbursement.author.firstName.concat(" ").concat(reimbursement.author.lastName)}</td>
+                    <td>${reimbursement.resolver.firstName.concat(" ").concat(reimbursement.resolver.lastName)}</td>
                     <td>${reimbursement.status.status}</td>
                     <td>${reimbursement.type.type}</td>
-                    <td><a download="receipt.png" href="data:image/png;base64,${reimbursement.receipt}" alt="">Download</td>
                     <td><select class="form-control" name="reimbursementStatusId">
                         <c:forEach var="status" items="${reimbursementStatus}">
                             <option value="${status.statusId}">${status.status}</option>

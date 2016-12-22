@@ -65,7 +65,7 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
                         resultSet.getString("REIMB_DESCRIPTION"),
                         blobToBase64String(resultSet.getBlob("REIMB_RECEIPT")),
                         userDAO.getByUserId(resultSet.getInt("REIMB_AUTHOR")),
-                        null,
+                        resultSet.getInt("REIMB_RESOLVER") != 0 ? userDAO.getByUserId(resultSet.getInt("REIMB_RESOLVER")) : null,
                         statusDAO.getReimbursementStatus(resultSet.getInt("REIMB_STATUS_ID")),
                         typeDAO.getReimbursementType(resultSet.getInt("REIMB_TYPE_ID"))));
             }
@@ -99,7 +99,7 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
                         resultSet.getString("REIMB_DESCRIPTION"),
                         blobToBase64String(resultSet.getBlob("REIMB_RECEIPT")),
                         userDAO.getByUserId(resultSet.getInt("REIMB_AUTHOR")),
-                        null,
+                        resultSet.getInt("REIMB_RESOLVER") != 0 ? userDAO.getByUserId(resultSet.getInt("REIMB_RESOLVER")) : null,
                         statusDAO.getReimbursementStatus(resultSet.getInt("REIMB_STATUS_ID")),
                         typeDAO.getReimbursementType(resultSet.getInt("REIMB_TYPE_ID"))));
             }
@@ -127,10 +127,10 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
         PreparedStatement statement;
         try {
             statement = connection.prepareStatement(sql);
-            statement.setInt(1,reimbursementStatusId);
-            statement.setInt(2,user.getUserId());
+            statement.setInt(1, reimbursementStatusId);
+            statement.setInt(2, user.getUserId());
             statement.setTimestamp(3, new Timestamp(new Date().getTime()));
-            statement.setInt(4,reimbursementId);
+            statement.setInt(4, reimbursementId);
             statement.executeUpdate();
             connection.commit();
         } catch (SQLException e) {
@@ -141,14 +141,15 @@ public class ReimbursementDAOImplementation implements ReimbursementDAO {
     private String blobToBase64String(Blob blob) {
         String string = "";
         try {
-            string = Base64.getEncoder().encodeToString(blob.getBytes(1,(int)blob.length()));
+            string = Base64.getEncoder().encodeToString(blob.getBytes(1, (int) blob.length()));
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return string;
     }
+
     private Blob base64StringToBlob(String base64) {
-       Blob blob = null;
+        Blob blob = null;
         try {
             blob = new SerialBlob(Base64.getDecoder().decode(base64));
         } catch (SQLException e) {
