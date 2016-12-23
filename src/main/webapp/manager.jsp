@@ -8,25 +8,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="scripts/manager.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#filterMenu').change(function () {
-                switch ($(this).val()) {
-                    case "All": {
-                        $("tr").show();
-                        break;
-                    }
-                    <c:forEach var="status" items="${reimbursementStatus}">
-                    case "${status.status}": {
-                        $("tbody tr").hide();
-                        $(".${status.status}").show();
-                        break;
-                    }
-                    </c:forEach>
-                }
-            });
-        });
-    </script>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -78,7 +59,8 @@
                     <td>${reimbursement.submitted}</td>
                     <td>${reimbursement.resolved}</td>
                     <td>${reimbursement.description}</td>
-                    <td><a download="receipt.png" href="data:image/png;base64,${reimbursement.receipt}" alt="">Download</a></td>
+                    <td><a download="receipt.png" href="data:image/png;base64,${reimbursement.receipt}"
+                           alt="">Download</a></td>
                     <td>${reimbursement.author.firstName.concat(" ").concat(reimbursement.author.lastName)}</td>
                     <td>${reimbursement.resolver.firstName.concat(" ").concat(reimbursement.resolver.lastName)}</td>
                     <td>${reimbursement.status.status}</td>
