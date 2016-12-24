@@ -16,7 +16,7 @@
             <a class="navbar-brand" href="#">Employee Reimbursement System</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="/Project/logout">Logout</a></li>
+            <li><a href="http://localhost:7001/Project/logout">Logout</a></li>
         </ul>
     </div>
 </nav>

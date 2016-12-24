@@ -22,9 +22,9 @@
             <a class="navbar-brand" href="#">Employee Reimbursement System</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="/Project/viewPastTickets">View Past Tickets</a></li>
+            <li><a href="http://localhost:7001/Project/viewPastTickets">View Past Tickets</a></li>
             <li><a href="#">Add Reimbursement request</a></li>
-            <li><a href="/Project/logout">Logout</a></li>
+            <li><a href="http://localhost:7001/Project/logout">Logout</a></li>
         </ul>
     </div>
 </nav>

@@ -13,7 +13,6 @@
     <script src="scripts/viewPastTickets.js"></script>
 </head>
 <body>
-
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -21,8 +20,8 @@
         </div>
         <ul class="nav navbar-nav">
             <li><a href="#">View Past Tickets</a></li>
-            <li><a href="/Project/addReimbursement">Add Reimbursement request</a></li>
-            <li><a href="/Project/logout">Logout</a></li>
+            <li><a href="http://localhost:7001/Project/addReimbursement">Add Reimbursement request</a></li>
+            <li><a href="http://localhost:7001/Project/logout">Logout</a></li>
         </ul>
     </div>
 </nav>
@@ -45,20 +44,22 @@
         </thead>
         <tbody>
         <c:forEach var="reimbursement" items="${reimbursements}">
-                <tr>
-                    <td>${reimbursement.id}</td>
-                    <td class="reimbursementAmount">${reimbursement.amount}</td>
-                    <td>${reimbursement.submitted}</td>
-                    <td>${reimbursement.resolved}</td>
-                    <td>${reimbursement.description}</td>
-                    <td><a download="receipt.png" href="data:image/png;base64,${reimbursement.receipt}" alt="">Download</a></td>
-                    <td>${reimbursement.author.firstName.concat(" ").concat(reimbursement.author.lastName)}</td>
-                    <td>${reimbursement.resolver.firstName.concat(" ").concat(reimbursement.resolver.lastName)}</td>
-                    <td>${reimbursement.status.status}</td>
-                    <td>${reimbursement.type.type}</td>
-                </tr>
+            <tr>
+                <td>${reimbursement.id}</td>
+                <td class="reimbursementAmount">${reimbursement.amount}</td>
+                <td>${reimbursement.submitted}</td>
+                <td>${reimbursement.resolved}</td>
+                <td>${reimbursement.description}</td>
+                <td><a download="receipt.png" href="data:image/png;base64,${reimbursement.receipt}" alt="">Download</a>
+                </td>
+                <td>${reimbursement.author.firstName.concat(" ").concat(reimbursement.author.lastName)}</td>
+                <td>${reimbursement.resolver.firstName.concat(" ").concat(reimbursement.resolver.lastName)}</td>
+                <td>${reimbursement.status.status}</td>
+                <td>${reimbursement.type.type}</td>
+            </tr>
         </c:forEach>
         </tbody>
     </table>
+</div>
 </body>
 </html>

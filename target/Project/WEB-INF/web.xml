@@ -8,6 +8,10 @@
         <servlet-name>FrontController</servlet-name>
         <servlet-class>com.revature.web.FrontController</servlet-class>
     </servlet>
+    <filter>
+        <filter-name>security</filter-name>
+        <filter-class>com.revature.web.SecurityFilter</filter-class>
+    </filter>
     <servlet-mapping>
         <servlet-name>FrontController</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -19,4 +23,8 @@
         <url-pattern>/reimbursementModified</url-pattern>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
+    <filter-mapping>
+        <filter-name>security</filter-name>
+        <url-pattern>/secure/*</url-pattern>
+    </filter-mapping>
 </web-app>
