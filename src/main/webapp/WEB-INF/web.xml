@@ -25,6 +25,13 @@
     </servlet-mapping>
     <filter-mapping>
         <filter-name>security</filter-name>
-        <url-pattern>/secure/*</url-pattern>
+        <url-pattern>/login</url-pattern>
+        <url-pattern>/employee</url-pattern>
+        <url-pattern>/manager</url-pattern>
+        <url-pattern>/addReimbursement</url-pattern>
+        <url-pattern>/viewPastTickets</url-pattern>
+        <url-pattern>/reimbursementAdded</url-pattern>
+        <url-pattern>/reimbursementModified</url-pattern>
+        <url-pattern>/logout</url-pattern>
     </filter-mapping>
 </web-app>

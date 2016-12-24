@@ -10,6 +10,7 @@ import java.io.IOException;
 
 public class FrontController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println(request.getRequestURI());
         switch (request.getRequestURI()) {
             case "/Project/login": {
                 new LoginController().doAll(request, response);
