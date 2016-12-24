@@ -11,7 +11,9 @@
       <root url="jar://$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/javax.servlet.jsp.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="http://docs.oracle.com/javaee/6/api/" />
+    </JAVADOC>
     <SOURCES />
   </library>
 </component>
