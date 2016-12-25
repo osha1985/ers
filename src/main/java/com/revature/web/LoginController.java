@@ -24,6 +24,7 @@ public class LoginController{
             request.getSession().setAttribute("reimbursementTypes", delegate.getReimbursementTypes());
             request.getSession().setAttribute("reimbursementStatus", delegate.getReimbursementStatus());
             user = delegate.login(username, password);
+            request.getSession().setAttribute("user", user);
             if (user.getRole().getUserRole().equals("Finance Manager")) {
                 request.setAttribute("reimbursements", delegate.viewAllReimbursements());
                 request.getRequestDispatcher("manager.jsp").forward(request, response);

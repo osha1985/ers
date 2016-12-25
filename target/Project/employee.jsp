@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Case</title>
+    <title>Welcome ${user.firstName.concat(" ").concat(user.lastName)}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -26,7 +26,7 @@
 </nav>
 
 <div class="container">
-    <h3>Welcome to the Employee Reimbursement System</h3>
+    <h3>Welcome ${user.firstName.concat(" ").concat(user.lastName)} to the Employee Reimbursement System</h3>
     <h4>Please select an option at the top</h4>
 </div>
 
