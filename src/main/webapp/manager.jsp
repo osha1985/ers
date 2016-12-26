@@ -22,9 +22,9 @@
     </div>
 </nav>
 
-<div class="container" >
+<div class="container">
     <label for="filterMenu">Filter Reimbursements:</label>
-    <div class="btn-group"  id="filterMenu" role="group" aria-label="Filter Reimbursements:">
+    <div class="btn-group" id="filterMenu" role="group" aria-label="Filter Reimbursements:">
         <button type="button" class="btn btn-default filter" value="All">All</button>
         <c:forEach var="status" items="${reimbursementStatus}">
             <button type="button" class="btn btn-default filter" value="${status.status}">${status.status}</button>
@@ -66,11 +66,16 @@
                     <td>${reimbursement.resolver.firstName.concat(" ").concat(reimbursement.resolver.lastName)}</td>
                     <td>${reimbursement.status.status}</td>
                     <td>${reimbursement.type.type}</td>
-                    <td><select class="form-control" name="reimbursementStatusId">
+                    <td>
                         <c:forEach var="status" items="${reimbursementStatus}">
-                            <option value="${status.statusId}">${status.status}</option>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="reimbursementStatusId"
+                                           value="${status.statusId}">${status.status}
+                                </label>
+                            </div>
                         </c:forEach>
-                    </select></td>
+                    </td>
                     <td>
                         <button type="submit" class="btn btn-default">Submit</button>
                     </td>
