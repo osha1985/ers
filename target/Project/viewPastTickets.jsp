@@ -47,8 +47,8 @@
             <tr>
                 <td>${reimbursement.id}</td>
                 <td class="reimbursementAmount">${reimbursement.amount}</td>
-                <td>${reimbursement.submitted}</td>
-                <td>${reimbursement.resolved}</td>
+                <td>${reimbursement.submitted.toLocaleString()}</td>
+                <td>${reimbursement.resolved.toLocaleString()}</td>
                 <td>${reimbursement.description}</td>
                 <td><a download="receipt.png" href="data:image/png;base64,${reimbursement.receipt}" alt="">Download</a>
                 </td>
