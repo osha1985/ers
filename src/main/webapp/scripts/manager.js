@@ -7,12 +7,14 @@ $(document).ready(function () {
     $(".reimbursementAmount").each(function () {
         $(this).html(formatter.format($(this).html()));
     });
-    $("#filterMenu").change(function () {
+    $(".filter").click(function () {
+        $(".filter").removeClass("active btn-success");
+        $(this).addClass("active btn-success");
         let that = this;
         $("tbody tr").each(function () {
-            if(that.val() == "All") {
+            if ($(that).val() == "All") {
                 $(this).show();
-            } else if ($(this).hasClass(that.val())) {
+            } else if ($(this).hasClass($(that).val())) {
                 $(this).show();
             } else {
                 $(this).hide();

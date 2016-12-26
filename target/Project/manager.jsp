@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.sql.Timestamp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,17 +21,17 @@
         </ul>
     </div>
 </nav>
-<div class="container">
-    <div class="form-group">
-        <label for="sel1">Filter Reimbursements:</label>
-        <select id="filterMenu" class="form-control" id="sel1">
-            <option value="All">All</option>
-            <c:forEach var="status" items="${reimbursementStatus}">
-                <option value="${status.status}">${status.status}</option>
-            </c:forEach>
-        </select>
+
+<div class="container" >
+    <label for="filterMenu">Filter Reimbursements:</label>
+    <div class="btn-group"  id="filterMenu" role="group" aria-label="Filter Reimbursements:">
+        <button type="button" class="btn btn-default filter" value="All">All</button>
+        <c:forEach var="status" items="${reimbursementStatus}">
+            <button type="button" class="btn btn-default filter" value="${status.status}">${status.status}</button>
+        </c:forEach>
     </div>
 </div>
+
 <div class="container">
     <h2>Reimbursements</h2>
     <table class="table">
@@ -56,8 +57,8 @@
                 <tr class="${reimbursement.status.status}">
                     <td>${reimbursement.id}</td>
                     <td class="reimbursementAmount">${reimbursement.amount}</td>
-                    <td>${reimbursement.submitted}</td>
-                    <td>${reimbursement.resolved}</td>
+                    <td>${reimbursement.submitted.toLocaleString()}</td>
+                    <td>${reimbursement.resolved.toLocaleString()}</td>
                     <td>${reimbursement.description}</td>
                     <td><a download="receipt.png" href="data:image/png;base64,${reimbursement.receipt}"
                            alt="">Download</a></td>
