@@ -13,9 +13,19 @@ import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 
+
+/**
+ * The type Reimbursement dao implementation.
+ */
 public class ReimbursementDAOImplementation implements ReimbursementDAO {
     private Connection connection = null;
 
+
+    /**
+     * Instantiates a new Reimbursement dao implementation.
+     *
+     * @param connection the connection
+     */
     public ReimbursementDAOImplementation(Connection connection) {
         this.connection = connection;
     }

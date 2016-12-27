@@ -5,6 +5,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Employee Reimbursement System</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -70,7 +71,7 @@
                         <c:forEach var="status" items="${reimbursementStatus}">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="reimbursementStatusId"
+                                    <input class="radioButton" type="radio" name="reimbursementStatusId"
                                            value="${status.statusId}">${status.status}
                                 </label>
                             </div>

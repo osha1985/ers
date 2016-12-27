@@ -8,9 +8,15 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * The type Facade.
+ */
 public class Facade {
     private Connection connection = null;
 
+    /**
+     * Instantiates a new Facade.
+     */
     public Facade() {
         try {
             if(connection == null) {
@@ -23,6 +29,13 @@ public class Facade {
         }
     }
 
+    /**
+     * Gets user by name.
+     *
+     * @param username the username
+     * @return the user by name
+     * @throws AuthenticationException the authentication exception
+     */
     public User getUserByName(String username) throws AuthenticationException {
         UserDAO dao = UserDAOFactory.getInstance(connection);
         User user = dao.getByUsername(username);
@@ -39,6 +52,13 @@ public class Facade {
         }
     }
 
+    /**
+     * Gets user role.
+     *
+     * @param username the username
+     * @return the user role
+     * @throws AuthenticationException the authentication exception
+     */
     Role getUserRole(String username) throws AuthenticationException {
         UserDAO dao = UserDAOFactory.getInstance(connection);
         User user = dao.getByUsername(username);
@@ -46,6 +66,17 @@ public class Facade {
         return user.getRole();
     }
 
+    /**
+     * Insert.
+     *
+     * @param username    the username
+     * @param amount      the amount
+     * @param description the description
+     * @param receipt     the receipt
+     * @param status      the status
+     * @param typeId      the type id
+     * @throws AuthenticationException the authentication exception
+     */
     public void insert(String username, double amount, String description, String receipt, ReimbursementStatus status, int typeId) throws AuthenticationException {
         ReimbursementDAO dao = ReimbursementDAOFactory.getInstance(connection);
         Reimbursement reimbursement = dao.createNewReimbursement(username, amount, description, receipt, status, typeId);
@@ -53,6 +84,12 @@ public class Facade {
         closeConnection();
     }
 
+    /**
+     * Gets reimbursements.
+     *
+     * @return the reimbursements
+     * @throws AuthenticationException the authentication exception
+     */
     public List<Reimbursement> getReimbursements() throws AuthenticationException {
         List<Reimbursement> list;
         ReimbursementDAO dao = ReimbursementDAOFactory.getInstance(connection);
@@ -61,6 +98,13 @@ public class Facade {
         return list;
     }
 
+    /**
+     * Gets reimbursements.
+     *
+     * @param username the username
+     * @return the reimbursements
+     * @throws AuthenticationException the authentication exception
+     */
     public List<Reimbursement> getReimbursements(String username) throws AuthenticationException {
         List<Reimbursement> list;
         ReimbursementDAO dao = ReimbursementDAOFactory.getInstance(connection);
@@ -69,6 +113,11 @@ public class Facade {
         return list;
     }
 
+    /**
+     * Gets reimbursement status.
+     *
+     * @return the reimbursement status
+     */
     public List<ReimbursementStatus> getReimbursementStatus() {
         List<ReimbursementStatus> statusList;
         ReimbursementStatusDAO dao = ReimbursementStatusDAOFactory.getInstance(connection);
@@ -77,6 +126,11 @@ public class Facade {
         return statusList;
     }
 
+    /**
+     * Gets reimbursement types.
+     *
+     * @return the reimbursement types
+     */
     public List<ReimbursementType> getReimbursementTypes() {
         ReimbursementTypeDAO dao = ReimbursementTypeDAOFactory.getInstance(connection);
         List<ReimbursementType> types;
@@ -85,6 +139,14 @@ public class Facade {
         return types;
     }
 
+    /**
+     * Change status.
+     *
+     * @param reimbursementId       the reimbursement id
+     * @param reimbursementStatusId the reimbursement status id
+     * @param username              the username
+     * @throws AuthenticationException the authentication exception
+     */
     public void changeStatus(int reimbursementId, int reimbursementStatusId, String username) throws AuthenticationException {
         ReimbursementDAO dao = ReimbursementDAOFactory.getInstance(connection);
         dao.changeStatus(reimbursementId, reimbursementStatusId, username);
