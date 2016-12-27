@@ -17,9 +17,9 @@ public interface ReimbursementStatusDAO {
     ReimbursementStatus getReimbursementStatus(int statusId);
 
     /**
-     * Gets reimbursement status.
+     * Returns a list of java beans which contains information about the reimbursement status
      *
-     * @return the reimbursement status
+     * @return A list of java beans which contains information about the reimbursement status
      */
     List<ReimbursementStatus> getReimbursementStatus();
 }

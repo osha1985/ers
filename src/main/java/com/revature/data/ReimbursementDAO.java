@@ -54,12 +54,12 @@ public interface ReimbursementDAO {
     Reimbursement createNewReimbursement(String username, double amount, String description, String receipt, ReimbursementStatus status, int typeId) throws AuthenticationException;
 
     /**
-     * Change status.
+     * Changes the status of a user's reimbursement
      *
-     * @param reimbursementId       the reimbursement id
-     * @param reimbursementStatusId the reimbursement status id
-     * @param username              the username
-     * @throws AuthenticationException the authentication exception
+     * @param reimbursementId       The id of the reimbursement that will be changed
+     * @param reimbursementStatusId The id of the status that the user's reimbursement will be changed to
+     * @param username              The username of the user that submitted the reimbursement
+     * @throws AuthenticationException Throws an AuthenticationException if the user isn't found in the database
      */
     void changeStatus(int reimbursementId, int reimbursementStatusId, String username) throws AuthenticationException;
 }
