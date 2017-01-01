@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="java.sql.Timestamp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="scripts/manager.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -49,25 +50,24 @@
             <th>Status</th>
             <th>Type</th>
             <th>Change status</th>
-            <th>Submit changes</th>
         </tr>
         </thead>
         <tbody>
         <c:forEach var="reimbursement" items="${reimbursements}">
-            <form id="reimbursementForm" action="manager" method="post">
-                <tr class="${reimbursement.status.status}">
-                    <td>${reimbursement.id}</td>
-                    <td class="reimbursementAmount">${reimbursement.amount}</td>
-                    <td>${reimbursement.submitted.toLocaleString()}</td>
-                    <td>${reimbursement.resolved.toLocaleString()}</td>
-                    <td>${reimbursement.description}</td>
-                    <td><a download="receipt.png" href="data:image/png;base64,${reimbursement.receipt}"
-                           alt="">Download</a></td>
-                    <td>${reimbursement.author.firstName.concat(" ").concat(reimbursement.author.lastName)}</td>
-                    <td>${reimbursement.resolver.firstName.concat(" ").concat(reimbursement.resolver.lastName)}</td>
-                    <td>${reimbursement.status.status}</td>
-                    <td>${reimbursement.type.type}</td>
-                    <td>
+            <tr class="${reimbursement.status.status}">
+                <td>${reimbursement.id}</td>
+                <td class="reimbursementAmount">${reimbursement.amount}</td>
+                <td>${reimbursement.submitted.toLocaleString()}</td>
+                <td>${reimbursement.resolved.toLocaleString()}</td>
+                <td>${reimbursement.description}</td>
+                <td><a download="receipt.png" href="data:image/png;base64,${reimbursement.receipt}">Download</a>
+                </td>
+                <td>${reimbursement.author.firstName.concat(" ").concat(reimbursement.author.lastName)}</td>
+                <td>${reimbursement.resolver.firstName.concat(" ").concat(reimbursement.resolver.lastName)}</td>
+                <td>${reimbursement.status.status}</td>
+                <td>${reimbursement.type.type}</td>
+                <td>
+                    <form id="reimbursementForm" action="manager" method="post">
                         <c:forEach var="status" items="${reimbursementStatus}">
                             <div class="radio">
                                 <label>
@@ -76,13 +76,11 @@
                                 </label>
                             </div>
                         </c:forEach>
-                    </td>
-                    <td>
+                        <input name="reimbursementId" type="hidden" value="${reimbursement.id}">
                         <button type="submit" class="btn btn-default">Submit</button>
-                    </td>
-                </tr>
-                <input name="reimbursementId" type="hidden" value="${reimbursement.id}">
-            </form>
+                    </form>
+                </td>
+            </tr>
         </c:forEach>
         </tbody>
     </table>

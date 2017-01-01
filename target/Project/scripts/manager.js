@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var formatter = new Intl.NumberFormat('en-US', {
+    let formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
         minimumFractionDigits: 2
@@ -21,5 +21,6 @@ $(document).ready(function () {
             }
         });
     });
+    //$('.table').DataTable();
     $(".radioButton").prop("checked", true);
 });

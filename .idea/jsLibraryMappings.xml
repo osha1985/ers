@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{additional-methods, bootstrap, jQuery UI-1.10.2, jQuery-2.0.0, jquery, jquery.validate, jquery.validation-DefinitelyTyped}" />
+    <file url="PROJECT" libraries="{additional-methods, bootstrap, jQuery UI-1.10.2, jQuery-2.0.0, jquery, jquery.dataTables, jquery.validate, jquery.validation-DefinitelyTyped}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
     <includedPredefinedLibrary name="Nashorn" />
     <includedPredefinedLibrary name="WebGL" />
